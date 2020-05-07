@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const CatFact = ({ fact }) => (
-  <li>
-    <p>{fact}</p>
-  </li>
+  <p>
+    <span>{fact}</span>
+  </p>
 );
 
 CatFact.propTypes = {

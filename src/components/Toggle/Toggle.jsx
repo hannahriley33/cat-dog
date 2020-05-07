@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Toggle.css';
 
 const Toggle = ({ toggle, value }) => (
-  <section>
+  <section className={styles.Toggle}>
     <input id="toggle" type="checkbox" checked={value} onChange={toggle} />
-    <label htmlFor="toggle">toggler</label>
+    <label htmlFor="toggle"></label>
   </section>
 );
 

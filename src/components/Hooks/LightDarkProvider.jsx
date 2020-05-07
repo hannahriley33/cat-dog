@@ -8,12 +8,14 @@ export const LightDarkProvider = ({ children }) => {
   const [lightDark, setLightDark] = useState('light');
 
   const toggle = ({ target }) => {
-    if(target.checked) setLightDark('dark');
-    if(!target.checked) setLightDark('light');
+    console.log('!!!!!!');
+    console.log(lightDark);
+    if(!target.checked) setLightDark('dark');
+    if(target.checked) setLightDark('light');
   };
   //this is when ryan said the value in the provider needs 2 things
-      // provide checked state (light/dark)
-      // provide way to change checked state
+  // provide checked state (light/dark)
+  // provide way to change checked state
 
   return (
     <LightDarkContext.Provider value={{ lightDark, toggle }}>
@@ -29,4 +31,9 @@ LightDarkProvider.propTypes = {
 export const useLightDark = () => {
   const lightDark = useContext(LightDarkContext);
   return lightDark;
+};
+
+export const useToggle = () => {
+  const { toggle } = useContext(LightDarkContext);
+  return toggle;
 };
