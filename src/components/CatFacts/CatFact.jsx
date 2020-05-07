@@ -8,7 +8,7 @@ const CatFact = ({ fact }) => (
 );
 
 CatFact.propTypes = {
-  fact: PropTypes.string.isRequired
+  fact: PropTypes.array.isRequired
 };
 
 export default CatFact;
