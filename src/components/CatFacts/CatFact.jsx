@@ -1,16 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CatFact = ({ fact, status }) => (
-  <section>
+const CatFact = ({ fact }) => (
+  <li>
     <p>{fact}</p>
-    <p>status: {status ? 'true' : 'false'}</p>
-  </section>
+  </li>
 );
 
 CatFact.propTypes = {
-  fact: PropTypes.string.isRequired,
-  status: PropTypes.string
+  fact: PropTypes.string.isRequired
 };
 
 export default CatFact;

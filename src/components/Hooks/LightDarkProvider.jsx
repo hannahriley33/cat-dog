@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 
 const LightDarkContext = createContext();
@@ -29,4 +29,4 @@ LightDarkProvider.propTypes = {
 export const useLightDark = () => {
   const lightDark = useContext(LightDarkContext);
   return lightDark;
-}
+};

@@ -4,7 +4,6 @@ export const fetchCatFacts = () => {
     
     .then(json => json.map(fact => ({
       fact: fact.text,
-      status: fact.status.verified,
       id: fact._id
     })));
     

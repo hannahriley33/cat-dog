@@ -1,5 +1,11 @@
 import React from 'react';
+import Toggle from '../Toggle/Toggle';
 
 const Header = () => (
-  <h1></h1>
-)
+  <section>
+    <h1>Cat Facts</h1>
+    <Toggle />
+  </section>
+);
+
+export default Header;
