@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CatFact component matches snapshot 1`] = `
+<p>
+  <span>
+    <Component />
+  </span>
+</p>
+`;

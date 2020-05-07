@@ -5,11 +5,11 @@ const LightDarkContext = createContext();
 
 export const LightDarkProvider = ({ children }) => {
   
-  const [lightDark, setLightDark] = useState('light');
+  const [lightDark, setLightDark] = useState('dark');
 
   const toggle = ({ target }) => {
     console.log('!!!!!!');
-    console.log(lightDark);
+    console.log(target.checked);
     if(!target.checked) setLightDark('dark');
     if(target.checked) setLightDark('light');
   };
@@ -29,7 +29,7 @@ LightDarkProvider.propTypes = {
 };
 
 export const useLightDark = () => {
-  const lightDark = useContext(LightDarkContext);
+  const { lightDark } = useContext(LightDarkContext);
   return lightDark;
 };
 
@@ -37,3 +37,5 @@ export const useToggle = () => {
   const { toggle } = useContext(LightDarkContext);
   return toggle;
 };
+//
+
